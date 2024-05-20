@@ -14,7 +14,7 @@ def create_table(connection, sql):
     try:
         cursor = connection.cursor()
         cursor.execute(sql)
-        connection.commit()  # Ensure the table is committed to the database
+        connection.commit()
     except sqlite3.Error as error:
         print(f"Error creating table: {error}")
 
